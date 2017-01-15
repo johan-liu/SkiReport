@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RLSplashMain" android:background="@android:color/darker_gray">
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="80px"
+            android:text="@string/splash_name"
+            android:id="@+id/lblSplash" android:layout_alignParentTop="false" android:layout_alignParentRight="false"
+            android:layout_centerInParent="true" android:gravity="center"
+            android:textColor="#505050" android:textSize="48px"/>
+</RelativeLayout>

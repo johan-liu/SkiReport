@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="430px"
+        android:layout_height="480px" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RLParkHourlyMain" android:background="#FFFFFF">
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px" android:layout_below="@+id/imgParkState"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/weather_itemback" android:id="@+id/RLNextOneThree">
+        <TextView android:layout_width="fill_parent" android:layout_height="fill_parent"
+                  android:text="@string/forecast_1_3" android:id="@+id/txtNext13days"
+                  android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+                  android:gravity="center" android:textColor="#FFFFFF" android:textSize="20px"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/weather_itemback" android:id="@+id/RLNextFourSix"
+                    android:layout_alignParentLeft="true" android:layout_marginTop="10px"
+                    android:layout_below="@+id/RLNextOneThree">
+        <TextView android:layout_width="fill_parent" android:layout_height="fill_parent"
+                  android:text="@string/forecast_4_6" android:id="@+id/txtNext46days"
+                  android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+                  android:gravity="center" android:textColor="#FFFFFF" android:textSize="20px"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/three_before_back" android:id="@+id/RLNext1"
+                    android:layout_alignTop="@+id/RLNextOneThree" android:layout_toRightOf="@+id/RLNextOneThree"
+                    android:layout_marginLeft="10px">
+        <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext1Icon"
+                   android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                   android:layout_marginBottom="5px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="30px"
+                  android:id="@+id/txtNext1Str" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/three_before_back" android:id="@+id/RLNext3"
+                    android:layout_alignTop="@+id/RLNextOneThree" android:layout_alignParentRight="true">
+        <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext3Icon"
+                   android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                   android:layout_marginBottom="5px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="30px"
+                  android:id="@+id/txtNext3Str" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/three_before_back" android:id="@+id/RLNext2"
+                    android:layout_alignTop="@+id/RLNextOneThree" android:layout_toRightOf="@+id/RLNext1"
+                    android:layout_marginLeft="10px">
+        <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext2Icon"
+                   android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                   android:layout_marginBottom="5px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="30px"
+                  android:id="@+id/txtNext2Str" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/three_after_back" android:id="@+id/RLNext4"
+                    android:layout_alignTop="@+id/RLNextFourSix" android:layout_alignLeft="@+id/RLNext1">
+        <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext4Icon"
+                   android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                   android:layout_marginBottom="5px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="30px"
+                  android:id="@+id/txtNext4Str" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/three_after_back" android:id="@+id/RLNext5"
+                    android:layout_alignLeft="@+id/RLNext2" android:layout_alignTop="@+id/RLNextFourSix">
+        <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext5Icon"
+                   android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                   android:layout_marginBottom="5px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="30px"
+                  android:id="@+id/txtNext5Str" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/three_after_back" android:id="@+id/RLNext6"
+                    android:layout_alignParentRight="true" android:layout_alignTop="@+id/RLNextFourSix">
+        <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext6Icon"
+                   android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                   android:layout_marginBottom="5px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="30px"
+                  android:id="@+id/txtNext6Str" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px" android:layout_below="@+id/RLNextFourSix"
+                    android:layout_alignParentLeft="true" android:background="@drawable/weather_itemback"
+                    android:id="@+id/RLNextSevenNine" android:layout_marginTop="10px">
+        <TextView android:layout_width="fill_parent" android:layout_height="fill_parent"
+                  android:text="@string/forecast_7_9" android:id="@+id/txtNext79days"
+                  android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+                  android:gravity="center" android:textColor="#FFFFFF" android:textSize="20px"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/weather_itemback" android:id="@+id/RLNextTenTwelve"
+                    android:layout_alignParentLeft="true" android:layout_marginTop="10px"
+                    android:layout_below="@+id/RLNextSevenNine">
+        <TextView android:layout_width="fill_parent" android:layout_height="fill_parent"
+                  android:text="@string/forecast_10_12" android:id="@+id/txtNext1012days"
+                  android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+                  android:gravity="center" android:textColor="#FFFFFF" android:textSize="20px"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/three_before_back" android:id="@+id/RLNext7"
+                    android:layout_alignTop="@+id/RLNextSevenNine" android:layout_toRightOf="@+id/RLNextSevenNine"
+                    android:layout_marginLeft="10px">
+        <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext7Icon"
+                   android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                   android:layout_marginBottom="5px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="30px"
+                  android:id="@+id/txtNext7Str" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="12px" android:ellipsize="end" android:lines="1"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/three_before_back" android:id="@+id/RLNext9"
+                    android:layout_alignTop="@+id/RLNextSevenNine" android:layout_alignParentRight="true">
+        <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext9Icon"
+                   android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                   android:layout_marginBottom="5px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="30px"
+                  android:id="@+id/txtNext9Str" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/three_before_back" android:id="@+id/RLNext8"
+                    android:layout_alignTop="@+id/RLNextSevenNine" android:layout_toRightOf="@+id/RLNext7"
+                    android:layout_marginLeft="10px">
+        <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext8Icon"
+                   android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                   android:layout_marginBottom="5px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="30px"
+                  android:id="@+id/txtNext8Str" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/three_after_back" android:id="@+id/RLNext10"
+                    android:layout_alignTop="@+id/RLNextTenTwelve" android:layout_alignLeft="@+id/RLNext7">
+        <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext10Icon"
+                   android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                   android:layout_marginBottom="5px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="30px"
+                  android:id="@+id/txtNext10Str" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/three_after_back" android:id="@+id/RLNext11"
+                    android:layout_alignLeft="@+id/RLNext8" android:layout_alignTop="@+id/RLNextTenTwelve">
+        <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext11Icon"
+                   android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                   android:layout_marginBottom="5px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="30px"
+                  android:id="@+id/txtNext11Str" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="12px" android:ellipsize="end" android:lines="2"
+                />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100px" android:layout_height="100px"
+                    android:background="@drawable/three_after_back" android:id="@+id/RLNext12"
+                    android:layout_alignParentRight="true" android:layout_alignTop="@+id/RLNextTenTwelve">
+        <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext12Icon"
+                   android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                   android:layout_marginBottom="5px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="30px"
+                  android:id="@+id/txtNext12Str" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+    </RelativeLayout>
+    <Button
+            android:layout_width="80px"
+            android:layout_height="30px"
+            android:text="OK"
+            android:id="@+id/btnOK" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10px" android:textColor="#000000" android:textSize="20px"
+            android:background="#888888"/>
+</RelativeLayout>

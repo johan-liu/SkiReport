@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RLParkInfoMain">
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/imgBackground"
+               android:background="@drawable/background_alpha"/>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="80px" android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true" android:id="@+id/RLTopBar">
+        <ImageView android:layout_width="100px" android:layout_height="60px" android:id="@+id/imgLogoMark"
+                   android:background="@drawable/logo_small" android:layout_marginLeft="100px"
+                   android:layout_centerVertical="true"/>
+        <TextView android:layout_width="200px" android:layout_height="fill_parent" android:text="@string/logo_title"
+                  android:id="@+id/lblLogo" android:layout_alignParentTop="true" android:layout_alignParentLeft="false"
+                  android:gravity="center_vertical" android:textColor="#FFFFFF" android:textSize="32px"
+                  android:layout_toRightOf="@+id/imgLogoMark"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="60px"
+                    android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+                    android:id="@+id/RLBottomBar" android:background="#00FFFF">
+        <TextView android:layout_width="120px" android:layout_height="fill_parent" android:text="@string/mypark_title"
+                  android:id="@+id/lblMyParks" android:layout_alignParentBottom="false"
+                  android:layout_alignParentLeft="false" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="20px" android:textStyle="bold" android:background="#000000"
+                  android:layout_marginBottom="3px" android:layout_alignParentTop="true"/>
+        <TextView android:layout_width="120px" android:layout_height="fill_parent" android:text="@string/news_title"
+                  android:id="@+id/lblEpicDirt" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="18px" android:layout_alignParentLeft="false"
+                  android:layout_toRightOf="@id/lblMyParks" android:layout_marginBottom="1px"
+                  android:background="#000000" android:layout_alignTop="@+id/lblMyParks"
+                  android:layout_alignParentTop="true"/>
+        <TextView android:layout_width="120px" android:layout_height="fill_parent" android:text="@string/search_title"
+                  android:id="@+id/lblSearch" android:gravity="center" android:textColor="#FFFFFF"
+                  android:layout_centerVertical="true" android:layout_alignParentLeft="false"
+                  android:layout_toRightOf="@id/lblEpicDirt" android:textSize="18px" android:layout_marginBottom="1px"
+                  android:background="#000000" android:layout_alignTop="@+id/lblMyParks"
+                  android:layout_alignParentTop="true"/>
+        <TextView android:layout_width="120px" android:layout_height="fill_parent" android:text="@string/settings_title"
+                  android:id="@+id/lblSettings" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="18px" android:layout_centerVertical="true" android:layout_alignParentLeft="false"
+                  android:layout_toRightOf="@id/lblSearch" android:layout_marginBottom="1px"
+                  android:background="#000000" android:layout_alignTop="@+id/lblMyParks"
+                  android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView" android:layout_below="@+id/RLTopBar" android:layout_above="@+id/RLBottomBar">
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <TextView android:layout_width="240px" android:layout_height="70px"
+                      android:id="@+id/txtParkName"
+                      android:gravity="center_vertical"
+                      android:textColor="#FFFFFF"
+                      android:layout_alignParentLeft="true" android:layout_marginTop="30px"
+                      android:textSize="28px" android:layout_marginLeft="20px" android:lines="2" android:ellipsize="end"
+                      android:textStyle="bold"/>
+            <ImageView
+                    android:layout_width="32px"
+                    android:layout_height="40px"
+                    android:id="@+id/imgParkState" android:layout_below="@+id/txtParkName"
+                    android:layout_alignLeft="@+id/txtParkName" android:scaleType="fitCenter"
+                    />
+            <ImageView android:layout_width="32px" android:layout_height="40px" android:id="@+id/imgParkWeather"
+                       android:scaleType="fitCenter" android:layout_below="@+id/txtParkName"
+                       android:layout_toRightOf="@+id/imgParkState"/>
+            <TextView android:layout_width="160px" android:layout_height="40px"
+                      android:id="@+id/txtParkWeatherStr"
+                      android:textColor="#FFFFFF"
+                      android:layout_below="@+id/txtParkName"
+                      android:layout_toRightOf="@+id/imgParkWeather" android:textSize="16px" android:gravity="center_vertical|left"
+                      android:layout_marginLeft="10px" android:lines="2" android:ellipsize="end"
+                      android:linksClickable="false"/>
+            <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="40px"
+                    android:text="@string/park_trailmap"
+                    android:id="@+id/btnTrailMap" android:layout_alignTop="@+id/txtParkName"
+                    android:layout_toRightOf="@+id/txtParkName" android:background="@drawable/yellow_button"
+                    android:layout_marginRight="20px" android:textColor="#FFFFFF" android:textSize="20px"
+                    android:layout_marginTop="5px"/>
+            <Button android:layout_width="fill_parent" android:layout_height="40px" android:text="@string/park_hrforecast"
+                    android:id="@+id/btnHourlyFor"
+                    android:background="@drawable/blue_button"
+                    android:layout_alignBottom="@+id/txtParkWeatherStr" android:layout_alignRight="@+id/btnTrailMap"
+                    android:layout_alignLeft="@+id/btnTrailMap" android:textColor="#FFFFFF" android:textSize="20px"
+                    android:layout_marginBottom="5px"/>
+            <RelativeLayout
+                    android:layout_width="110px"
+                    android:layout_height="110px" android:layout_below="@+id/imgParkState"
+                    android:layout_alignParentLeft="true" android:layout_marginTop="20px"
+                    android:background="@drawable/weather_itemback" android:id="@+id/RLPast3days"
+                    >
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/park_pastdaytitle"
+                        android:id="@+id/txtPast3days" android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" android:gravity="center" android:textColor="#FFFFFF"
+                        android:textSize="20px"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="110px" android:layout_height="110px"
+                            android:background="@drawable/three_before_back" android:id="@+id/RLPast1Weather"
+                            android:layout_alignTop="@+id/RLPast3days" android:layout_toRightOf="@+id/RLPast3days"
+                            android:layout_marginLeft="14px">
+                <TextView android:layout_width="fill_parent" android:layout_height="40px" android:id="@+id/txtPast1Week"
+                          android:layout_alignParentBottom="false"
+                          android:gravity="left|top" android:textColor="#FFFFFF" android:textSize="12px"
+                          android:ellipsize="end" android:lines="1" android:layout_marginTop="5px"
+                          android:layout_marginLeft="5px" android:layout_alignParentTop="false"
+                          android:layout_alignParentLeft="false"/>
+                <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="60px"
+                        android:id="@+id/imgPast1Icon" android:layout_alignParentBottom="false"
+                        android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px" android:layout_marginTop="5px" android:layout_marginBottom="5px"/>
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="40px"
+                        android:id="@+id/txtPast1Str"
+                        android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"
+                        android:gravity="center" android:textColor="#FFFFFF" android:textSize="12px" android:ellipsize="end"
+                        android:lines="2"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="110px" android:layout_height="110px"
+                            android:background="@drawable/three_before_back" android:id="@+id/RLPast2Weather"
+                            android:layout_alignTop="@+id/RLPast1Weather" android:layout_toRightOf="@+id/RLPast1Weather"
+                            android:layout_marginLeft="13px">
+                <TextView android:layout_width="fill_parent" android:layout_height="40px" android:id="@+id/txtPast2Week"
+                          android:layout_alignParentBottom="false" android:gravity="left|top"
+                          android:textColor="#FFFFFF" android:textSize="12px" android:ellipsize="end" android:lines="1"
+                          android:layout_marginTop="5px" android:layout_marginLeft="5px"
+                          android:layout_alignParentTop="false" android:layout_alignParentLeft="false"/>
+                <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgPast2Icon"
+                           android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                           android:layout_alignParentTop="true"
+                           android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                           android:layout_marginBottom="5px"/>
+                <TextView android:layout_width="fill_parent" android:layout_height="40px"
+                          android:id="@+id/txtPast2Str" android:layout_centerHorizontal="true"
+                          android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                          android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="110px" android:layout_height="110px"
+                            android:background="@drawable/three_before_back" android:id="@+id/RLPast3Weather"
+                            android:layout_alignTop="@+id/RLPast2Weather" android:layout_alignParentRight="true">
+                <TextView android:layout_width="fill_parent" android:layout_height="40px" android:id="@+id/txtPast3Week"
+                          android:layout_alignParentBottom="false" android:gravity="left|top"
+                          android:textColor="#FFFFFF" android:textSize="12px" android:ellipsize="end" android:lines="1"
+                          android:layout_marginTop="5px" android:layout_marginLeft="5px"
+                          android:layout_alignParentTop="false" android:layout_alignParentLeft="false"/>
+                <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgPast3Icon"
+                           android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                           android:layout_alignParentTop="true"
+                           android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                           android:layout_marginBottom="5px"/>
+                <TextView android:layout_width="fill_parent" android:layout_height="40px"
+                          android:id="@+id/txtPast3Str" android:layout_centerHorizontal="true"
+                          android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                          android:textSize="12px" android:ellipsize="end" android:lines="2" android:singleLine="false"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="110px" android:layout_height="110px"
+                            android:background="@drawable/weather_itemback" android:id="@+id/RLNext3days"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="10px" android:layout_below="@+id/RLPast1Weather"
+                            >
+                <TextView android:layout_width="fill_parent" android:layout_height="fill_parent"
+                          android:text="@string/park_nextdaytitle" android:id="@+id/txtNext3days"
+                          android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+                          android:gravity="center" android:textColor="#FFFFFF" android:textSize="20px"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="110px" android:layout_height="110px"
+                            android:background="@drawable/three_after_back" android:id="@+id/RLNext1Weather"
+                            android:layout_alignTop="@+id/RLNext3days" android:layout_alignLeft="@+id/RLPast1Weather"
+                            >
+                <TextView android:layout_width="fill_parent" android:layout_height="40px" android:id="@+id/txtNext1Week"
+                          android:layout_alignParentBottom="false" android:gravity="left|top"
+                          android:textColor="#FFFFFF" android:textSize="12px" android:ellipsize="end" android:lines="1"
+                          android:layout_marginTop="5px" android:layout_marginLeft="5px"
+                          android:layout_alignParentTop="false" android:layout_alignParentLeft="false"/>
+                <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext1Icon"
+                           android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                           android:layout_alignParentTop="true"
+                           android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                           android:layout_marginBottom="5px"/>
+                <TextView android:layout_width="fill_parent" android:layout_height="40px"
+                          android:id="@+id/txtNext1Str" android:layout_centerHorizontal="true"
+                          android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                          android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="110px" android:layout_height="110px"
+                            android:background="@drawable/three_after_back" android:id="@+id/RLNext2Weather"
+                            android:layout_alignLeft="@+id/RLPast2Weather" android:layout_alignTop="@+id/RLNext3days">
+                <TextView android:layout_width="fill_parent" android:layout_height="40px" android:id="@+id/txtNext2Week"
+                          android:layout_alignParentBottom="false" android:gravity="left|top"
+                          android:textColor="#FFFFFF" android:textSize="12px" android:ellipsize="end" android:lines="1"
+                          android:layout_marginTop="5px" android:layout_marginLeft="5px"
+                          android:layout_alignParentTop="false" android:layout_alignParentLeft="false"/>
+                <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext2Icon"
+                           android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                           android:layout_alignParentTop="true"
+                           android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                           android:layout_marginBottom="5px"/>
+                <TextView android:layout_width="fill_parent" android:layout_height="40px"
+                          android:id="@+id/txtNext2Str" android:layout_centerHorizontal="true"
+                          android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                          android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="110px" android:layout_height="110px"
+                            android:background="@drawable/three_after_back" android:id="@+id/RLNext3Weather"
+                            android:layout_alignParentRight="true" android:layout_alignTop="@+id/RLNext3days">
+                <TextView android:layout_width="fill_parent" android:layout_height="40px" android:id="@+id/txtNext3Week"
+                          android:layout_alignParentBottom="false" android:gravity="left|top"
+                          android:textColor="#FFFFFF" android:textSize="12px" android:ellipsize="end" android:lines="1"
+                          android:layout_marginTop="5px" android:layout_marginLeft="5px"
+                          android:layout_alignParentTop="false" android:layout_alignParentLeft="false"/>
+                <ImageView android:layout_width="fill_parent" android:layout_height="60px" android:id="@+id/imgNext3Icon"
+                           android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"
+                           android:layout_alignParentTop="true"
+                           android:layout_marginLeft="20px" android:layout_marginRight="20px" android:layout_marginTop="5px"
+                           android:layout_marginBottom="5px"/>
+                <TextView android:layout_width="fill_parent" android:layout_height="40px"
+                          android:id="@+id/txtNext3Str" android:layout_centerHorizontal="true"
+                          android:layout_alignParentBottom="true" android:gravity="center" android:textColor="#FFFFFF"
+                          android:textSize="12px" android:ellipsize="end" android:lines="2"/>
+            </RelativeLayout>
+            <TextView android:layout_width="240px" android:layout_height="50px" android:text="@string/park_comments"
+                      android:id="@+id/txtComments"
+                      android:textColor="#FFFFFF"
+                      android:textSize="38px" android:lines="1"
+                      android:ellipsize="end" android:layout_below="@+id/RLNext3days"
+                      android:layout_alignLeft="@+id/imgParkState" android:gravity="center_vertical|left"
+                      android:layout_marginTop="20px" android:textStyle="bold"/>
+            <Button android:layout_width="fill_parent" android:layout_height="50px" android:text="@string/park_riding"
+                    android:id="@+id/btnRidingtoday"
+                    android:background="@drawable/green_button"
+                    android:textColor="#FFFFFF"
+                    android:layout_alignRight="@+id/btnHourlyFor" android:layout_alignTop="@+id/txtComments"
+                    android:layout_toRightOf="@+id/txtComments" android:textSize="20px" android:visibility="invisible"/>
+            <ListView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listCommentsView" android:layout_below="@+id/txtComments"
+                    android:layout_alignLeft="@+id/txtComments" android:layout_alignRight="@+id/btnRidingtoday"
+                    android:layout_marginTop="10px"/>
+            <EditText
+                    android:layout_width="420px"
+                    android:layout_height="40px"
+                    android:id="@+id/ednTxtComment" android:layout_below="@+id/listCommentsView"
+                    android:layout_marginTop="20px" android:background="@drawable/edit_background"
+                    android:layout_marginLeft="5px" android:hint="@string/park_postcomment"
+                    android:textColor="#FFFFFF" android:textSize="24px" android:textColorHint="#888888"
+                    android:paddingLeft="20px" android:paddingRight="20px" android:paddingBottom="5px"
+                    android:lines="1" android:maxLines="1"
+                    android:singleLine="true"/>
+            <Button
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:id="@+id/btnPostComment" android:layout_alignTop="@+id/ednTxtComment"
+                    android:layout_alignBottom="@+id/ednTxtComment" android:layout_toRightOf="@+id/ednTxtComment"
+                    android:layout_alignParentRight="true" android:background="@drawable/post_comment"
+                    android:layout_marginRight="5px"/>
+            <TextView android:layout_width="200px" android:layout_height="50px" android:text="@string/park_info"
+                      android:id="@+id/txtInfo" android:textColor="#FFFFFF" android:textSize="38px"
+                      android:lines="1" android:ellipsize="end" android:layout_below="@+id/ednTxtComment"
+                      android:layout_alignLeft="@+id/txtComments" android:gravity="center_vertical|left"
+                      android:layout_marginTop="30px" android:textStyle="bold"/>
+            <TextView android:layout_width="fill_parent" android:layout_height="30px" android:text="@string/park_addparks"
+                      android:id="@+id/txtAddParks" android:textColor="#FFFFFF" android:textSize="20px" android:lines="1"
+                      android:ellipsize="end"
+                      android:gravity="center_vertical|right"
+                      android:textStyle="bold" android:layout_alignBottom="@+id/txtInfo"
+                      android:layout_toRightOf="@+id/txtInfo" android:layout_toLeftOf="@+id/imgAddPark"
+                      android:layout_marginRight="10px"/>
+            <ImageView
+                    android:layout_width="25px"
+                    android:layout_height="30px"
+                    android:id="@+id/imgAddPark"
+                    android:src="@drawable/addpark" android:layout_alignBottom="@+id/txtAddParks"
+                    android:layout_alignRight="@+id/btnPostComment" android:layout_marginRight="10px"/>
+            <TextView android:layout_width="150px" android:layout_height="25px"
+                      android:text="@string/park_vertical" android:id="@+id/txtVerticalTitle" android:textColor="#FFFFFF"
+                      android:textSize="20px" android:lines="1" android:ellipsize="end"
+                      android:gravity="center_vertical|left" android:textStyle="bold"
+                      android:layout_marginRight="10px"
+                      android:layout_alignLeft="@+id/txtInfo"
+                      android:layout_marginTop="10px" android:layout_below="@+id/txtAddParks"/>
+            <TextView android:layout_width="150px" android:layout_height="50px"
+                      android:id="@+id/txtVertical" android:textColor="#CCCCCC" android:textSize="20px"
+                      android:gravity="left|top"
+                      android:layout_marginRight="10px" android:layout_below="@+id/txtVerticalTitle"
+                      android:layout_alignLeft="@+id/txtInfo" android:layout_marginTop="10px" android:lines="2"
+                    />
+            <TextView android:layout_width="fill_parent" android:layout_height="25px" android:text="@string/park_address"
+                      android:id="@+id/txtAddressTitle" android:textColor="#FFFFFF" android:textSize="20px"
+                      android:lines="1" android:ellipsize="end" android:gravity="center_vertical|left"
+                      android:textStyle="bold"
+                      android:layout_alignTop="@+id/txtVerticalTitle" android:layout_toRightOf="@+id/txtVertical"
+                      android:layout_marginRight="20px"/>
+            <TextView android:layout_width="fill_parent" android:layout_height="50px"
+                      android:id="@+id/txtAddress" android:textColor="#CCCCCC" android:textSize="20px"
+                      android:gravity="left|top"
+                      android:layout_toRightOf="@+id/txtVertical"
+                      android:layout_marginRight="20px" android:layout_alignTop="@+id/txtVertical"
+                      android:lines="2" android:ellipsize="end"/>
+            <TextView android:layout_width="150px" android:layout_height="25px" android:text="@string/park_phonenumber"
+                      android:id="@+id/txtPhoneNumTitle" android:textColor="#FFFFFF" android:textSize="20px"
+                      android:lines="1" android:ellipsize="end" android:gravity="center_vertical|left"
+                      android:textStyle="bold" android:layout_marginRight="10px" android:layout_below="@+id/txtVertical"
+                      android:layout_alignLeft="@+id/txtInfo" android:layout_marginTop="10px"/>
+            <TextView android:layout_width="150px" android:layout_height="30px"
+                      android:id="@+id/txtPhoneNum" android:textColor="#CCCCCC" android:textSize="20px"
+                      android:gravity="left|top" android:layout_marginRight="10px"
+                      android:layout_below="@+id/txtPhoneNumTitle" android:layout_alignLeft="@+id/txtInfo"
+                      android:layout_marginTop="10px" android:autoLink="phone"/>
+            <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2px"
+                    android:id="@+id/imgLine" android:layout_marginLeft="5px" android:layout_marginRight="5px"
+                    android:layout_below="@+id/txtPhoneNum" android:src="@drawable/line"/>
+            <TextView android:layout_width="150px" android:layout_height="25px" android:text="@string/park_open"
+                      android:id="@+id/txtOpenTitle" android:textColor="#FFFFFF" android:textSize="20px"
+                      android:lines="1" android:ellipsize="end" android:gravity="center_vertical|left"
+                      android:textStyle="bold" android:layout_marginRight="10px" android:layout_below="@+id/imgLine"
+                      android:layout_alignLeft="@+id/txtPhoneNumTitle" android:layout_marginTop="15px"/>
+            <TextView android:layout_width="150px" android:layout_height="30px"
+                      android:id="@+id/txtOpen" android:textColor="#CCCCCC" android:textSize="20px"
+                      android:gravity="left|top" android:layout_marginRight="10px"
+                      android:layout_below="@+id/txtOpenTitle" android:layout_alignLeft="@+id/txtOpenTitle"
+                      android:layout_marginTop="10px"/>
+            <TextView android:layout_width="150px" android:layout_height="25px" android:text="@string/park_cost"
+                      android:id="@+id/txtCostTitle" android:textColor="#FFFFFF" android:textSize="20px"
+                      android:lines="1" android:ellipsize="end" android:gravity="center_vertical|left"
+                      android:textStyle="bold" android:layout_marginRight="10px" android:layout_below="@+id/txtOpen"
+                      android:layout_alignLeft="@+id/txtOpenTitle" android:layout_marginTop="10px"/>
+            <TextView android:layout_width="150px" android:layout_height="30px"
+                      android:id="@+id/txtCost" android:textColor="#CCCCCC" android:textSize="20px"
+                      android:gravity="left|top" android:layout_marginRight="10px"
+                      android:layout_below="@+id/txtCostTitle" android:layout_alignLeft="@+id/txtCostTitle"
+                      android:layout_marginTop="10px"/>
+            <TextView android:layout_width="100px" android:layout_height="25px" android:text="@string/park_rental"
+                      android:id="@+id/txtRentalTitle" android:textColor="#FFFFFF" android:textSize="20px"
+                      android:lines="1" android:ellipsize="end" android:gravity="center_vertical|left"
+                      android:textStyle="bold"
+                      android:layout_alignTop="@+id/txtCostTitle" android:layout_toRightOf="@+id/txtCostTitle"
+                      android:layout_marginLeft="10px"/>
+            <TextView android:layout_width="100px" android:layout_height="30px"
+                      android:id="@+id/txtRental" android:textColor="#CCCCCC" android:textSize="20px"
+                      android:gravity="left|top"
+                      android:layout_alignTop="@+id/txtCost" android:layout_alignLeft="@+id/txtRentalTitle"/>
+            <TextView android:layout_width="100px" android:layout_height="25px" android:text="@string/park_bikeshop"
+                      android:id="@+id/txtBikeShopTitle" android:textColor="#FFFFFF" android:textSize="20px"
+                      android:lines="1" android:ellipsize="end" android:gravity="center_vertical|left"
+                      android:textStyle="bold"
+                      android:layout_marginLeft="10px" android:layout_alignTop="@+id/txtRentalTitle"
+                      android:layout_toRightOf="@+id/txtRentalTitle"/>
+            <TextView android:layout_width="100px" android:layout_height="30px"
+                      android:id="@+id/txtBikeShop" android:textColor="#CCCCCC" android:textSize="20px"
+                      android:gravity="left|top"
+                      android:layout_alignTop="@+id/txtRental"
+                      android:layout_alignLeft="@+id/txtBikeShopTitle"/>
+            <TextView android:layout_width="200px" android:layout_height="50px" android:text="@string/park_social"
+                      android:id="@+id/txtSocial" android:textColor="#FFFFFF" android:textSize="38px" android:lines="1"
+                      android:ellipsize="end" android:layout_below="@+id/txtCost"
+                      android:layout_alignLeft="@+id/txtComments" android:gravity="center_vertical|left"
+                      android:layout_marginTop="20px" android:textStyle="bold"/>
+            <ImageView
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:id="@+id/imgFaceBook" android:src="@drawable/social_facebook"
+                    android:layout_below="@+id/txtSocial" android:layout_marginTop="20px"
+                    android:layout_marginLeft="110px"/>
+            <ImageView android:layout_width="50px" android:layout_height="50px" android:id="@+id/imgTwitter"
+                       android:src="@drawable/social_twitter" android:layout_below="@+id/txtSocial"
+                       android:layout_marginTop="20px" android:layout_marginLeft="20px"
+                       android:layout_toRightOf="@+id/imgFaceBook"/>
+            <ImageView android:layout_width="50px" android:layout_height="50px" android:id="@+id/imgInstagram"
+                       android:src="@drawable/social_instagram" android:layout_below="@+id/txtSocial"
+                       android:layout_marginTop="20px" android:layout_marginLeft="20px"
+                       android:layout_toRightOf="@+id/imgTwitter"/>
+            <ImageView android:layout_width="50px" android:layout_height="50px" android:id="@+id/imgPinkBike"
+                       android:src="@drawable/social_pb" android:layout_below="@+id/txtSocial"
+                       android:layout_marginTop="20px" android:layout_marginLeft="20px"
+                       android:layout_toRightOf="@+id/imgInstagram"/>
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50px" android:layout_below="@+id/imgPinkBike">
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

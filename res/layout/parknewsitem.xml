@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="420px"
+        android:layout_height="100px" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RLParkNewsItemMain" android:background="@drawable/item_background">
+    <TextView
+            android:layout_width="320px"
+            android:layout_height="fill_parent"
+            android:id="@+id/txtTitle" android:layout_marginLeft="10px" android:gravity="center_vertical"
+            android:textColor="#FFFFFF" android:textSize="22px"
+            android:layout_marginTop="5px" android:layout_toRightOf="@+id/imgNews" android:layout_marginBottom="5px"
+            android:layout_marginRight="5px"/>
+    <ImageView android:layout_width="80px" android:layout_height="80px" android:id="@+id/imgNews"
+               android:scaleType="fitCenter" android:layout_alignParentTop="false"
+               android:layout_centerVertical="true" android:layout_marginLeft="10px"/>
+</RelativeLayout>

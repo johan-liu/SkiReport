@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MuddyTyre</string>
+
+    <string name="splash_name">Muddy Tyre</string>
+    <string name="logo_title">Muddy Tyre</string>
+
+    <string name="park_trailmap">Trail Map</string>
+    <string name="park_hrforecast">Hourly forecast</string>
+
+    <string name="park_pastdaytitle">Past 3 days</string>
+    <string name="park_nextdaytitle">Next 3 days</string>
+
+    <string name="park_comments">Comments</string>
+    <string name="park_riding">I`m riding today</string>
+
+    <string name="park_postcomment">Post your comment</string>
+
+    <string name="park_info">Info</string>
+    <string name="park_addparks">Add to My Parks</string>
+    <string name="park_removeparks">Remove from My Parks</string>
+    <string name="park_vertical">Vertical</string>
+    <string name="park_address">Address</string>
+    <string name="park_phonenumber">Phone Number</string>
+    <string name="park_open">Open</string>
+    <string name="park_cost">Cost</string>
+    <string name="park_rental">Rental</string>
+    <string name="park_bikeshop">Bike Shop</string>
+    <string name="park_social">Social</string>
+
+    <string name="forecast_1_3">Next 1-3 hours</string>
+    <string name="forecast_4_6">Next 4-6 hours</string>
+    <string name="forecast_7_9">Next 7-9 hours</string>
+    <string name="forecast_10_12">Next 10-12 hours</string>
+
+    <string name="search_hint">Search(Name, State/Province)</string>
+
+    <string name="setting_username">Your Username</string>
+    <string name="setting_country">Country</string>
+    <string name="setting_notification">Notification</string>
+    <string name="setting_units">Units</string>
+    <string name="setting_savechanges">Save Changes</string>
+    <string name="setting_contact">Contact Us</string>
+
+    <string name="mypark_title">My Parks</string>
+    <string name="epic_title">Epic Dirt</string>
+    <string name="search_title">Search</string>
+    <string name="settings_title">Settings</string>
+
+    <string name="epicdir_popular">Most Popular</string>
+    <string name="epic_map">US Soil Conditions</string>
+
+    <string name="park_tempf">℉</string>
+    <string name="park_tempc">℃</string>
+
+    <string name="msg_servererror">Cannot connect to server</string>
+    <string name="msg_waiting">Please Wait...</string>
+
+    <string name="news_title">News</string>
+</resources>

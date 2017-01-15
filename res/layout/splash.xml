@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RLSplashMain" android:background="@drawable/background">
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="80px"
+            android:text="@string/splash_name"
+            android:id="@+id/lblSplash" android:layout_alignParentTop="false" android:layout_alignParentRight="false"
+            android:layout_centerInParent="true" android:gravity="center"
+            android:textColor="#FFFFFF" android:textSize="48px"/>
+    <ImageView
+            android:layout_width="350px"
+            android:layout_height="250px"
+            android:id="@+id/imgLogo" android:layout_above="@+id/lblSplash" android:layout_centerHorizontal="true"
+            android:background="@drawable/logo" android:scaleType="fitCenter"/>
+    <ImageView
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:id="@+id/imgProg1" android:layout_alignLeft="@+id/lblSplash"
+            android:layout_marginBottom="105px" android:layout_alignParentBottom="true"
+            android:layout_marginLeft="100px" android:background="@drawable/progress_white"/>
+    <ImageView android:layout_width="20px" android:layout_height="20px" android:id="@+id/imgProg2"
+               android:layout_alignTop="@+id/imgProg1" android:layout_toRightOf="@+id/imgProg1"
+               android:layout_marginLeft="30px" android:background="@drawable/progress_white"/>
+    <ImageView android:layout_width="20px" android:layout_height="20px" android:id="@+id/imgProg3"
+               android:layout_alignTop="@+id/imgProg2" android:layout_toRightOf="@+id/imgProg2"
+               android:layout_marginLeft="30px" android:background="@drawable/progress_white"/>
+    <ImageView android:layout_width="20px" android:layout_height="20px" android:id="@+id/imgProg4"
+               android:layout_alignTop="@+id/imgProg3" android:layout_toRightOf="@+id/imgProg3"
+               android:layout_marginLeft="30px" android:background="@drawable/progress_white"/>
+    <ImageView android:layout_width="20px" android:layout_height="20px" android:id="@+id/imgProg5"
+               android:layout_alignTop="@+id/imgProg4" android:layout_toRightOf="@+id/imgProg4"
+               android:layout_marginLeft="30px" android:background="@drawable/progress_white"/>
+    <ImageView android:layout_width="20px" android:layout_height="20px" android:id="@+id/imgProg6"
+               android:layout_alignTop="@+id/imgProg5" android:layout_toRightOf="@+id/imgProg5"
+               android:layout_marginLeft="30px" android:background="@drawable/progress_white"/>
+</RelativeLayout>

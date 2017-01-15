@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RLParkEpicMain">
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/imgBackground"
+               android:background="@drawable/background_alpha"/>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80px" android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/RLTopBar">
+        <ImageView
+                android:layout_width="100px"
+                android:layout_height="60px"
+                android:id="@+id/imgLogoMark" android:background="@drawable/logo_small"
+                android:layout_marginLeft="100px" android:layout_centerVertical="true"/>
+        <TextView
+                android:layout_width="200px"
+                android:layout_height="fill_parent"
+                android:text="@string/logo_title"
+                android:id="@+id/lblLogo" android:layout_alignParentTop="true" android:layout_alignParentLeft="false"
+                android:gravity="center_vertical"
+                android:textColor="#FFFFFF" android:textSize="32px" android:layout_toRightOf="@+id/imgLogoMark"/>
+    </RelativeLayout>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="80px"
+            android:text="Epic Dirt finds bike parks with the best weather and riding conditions"
+            android:id="@+id/lblTitle" android:layout_below="@+id/RLTopBar"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="30px" android:layout_marginRight="30px"
+            android:gravity="center_vertical" android:textSize="22px" android:textColor="#FFFFFF"
+            android:layout_marginTop="20px"/>
+    <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="300px"
+            android:id="@+id/listViewParks"
+            android:layout_marginTop="20px" android:layout_marginBottom="10px"
+            android:layout_below="@+id/lblTitle"/>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60px" android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/RLBottomBar" android:background="#00FFFF">
+        <TextView
+                android:layout_width="120px"
+                android:layout_height="fill_parent"
+                android:text="@string/mypark_title"
+                android:id="@+id/lblMyParks" android:layout_alignParentBottom="false"
+                android:layout_alignParentLeft="false" android:gravity="center" android:textColor="#FFFFFF"
+                android:textSize="20px" android:background="#000000"
+                android:layout_marginBottom="1px" android:layout_alignParentTop="true"/>
+        <TextView android:layout_width="120px" android:layout_height="fill_parent" android:text="@string/epic_title"
+                  android:id="@+id/lblEpicDirt"
+                  android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="18px" android:layout_alignParentLeft="false"
+                  android:layout_toRightOf="@id/lblMyParks" android:layout_marginBottom="3px"
+                  android:background="#000000" android:layout_alignParentTop="true" android:textStyle="bold"/>
+        <TextView android:layout_width="120px" android:layout_height="fill_parent" android:text="@string/search_title"
+                  android:id="@+id/lblSearch" android:gravity="center" android:textColor="#FFFFFF"
+                  android:layout_centerVertical="true" android:layout_alignParentLeft="false"
+                  android:layout_toRightOf="@id/lblEpicDirt" android:textSize="18px" android:layout_marginBottom="1px"
+                  android:background="#000000" android:layout_alignParentTop="true"/>
+        <TextView android:layout_width="120px" android:layout_height="fill_parent" android:text="@string/settings_title"
+                  android:id="@+id/lblSettings" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="18px" android:layout_centerVertical="true" android:layout_alignParentLeft="false"
+                  android:layout_toRightOf="@id/lblSearch" android:layout_marginBottom="1px"
+                  android:background="#000000" android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+    <TextView android:layout_width="240px" android:layout_height="50px" android:text="@string/epicdir_popular"
+              android:id="@+id/txtMostPopular" android:textColor="#FFFFFF" android:textSize="22px" android:lines="1"
+              android:ellipsize="end"
+              android:gravity="center_vertical|left"
+              android:layout_below="@+id/listViewParks" android:layout_alignParentLeft="true"
+              android:layout_marginLeft="20px"/>
+    <ListView android:layout_width="270px" android:layout_height="wrap_content" android:id="@+id/listViewPopular"
+              android:layout_below="@+id/txtMostPopular" android:layout_alignParentLeft="false"
+              android:layout_alignLeft="@+id/txtMostPopular" android:layout_marginRight="20px"
+              android:layout_above="@+id/RLBottomBar" android:layout_marginBottom="20px"/>
+    <Button
+            android:layout_width="150px"
+            android:layout_height="40px"
+            android:id="@+id/btnMap" android:layout_alignTop="@+id/listViewPopular"
+            android:layout_toRightOf="@+id/listViewPopular" android:background="@drawable/green_button"
+            android:text="@string/epic_map" android:textSize="16px"
+            android:textColor="#FFFFFF"/>
+</RelativeLayout>

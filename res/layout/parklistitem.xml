@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="420px"
+        android:layout_height="80px" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RLParkListItemMain" android:background="@drawable/item_background">
+    <TextView
+            android:layout_width="300px"
+            android:layout_height="35px"
+            android:id="@+id/txtName" android:layout_marginLeft="20px" android:gravity="center_vertical"
+            android:textColor="#FFFFFF" android:textSize="24px" android:ellipsize="end" android:lines="1"
+            android:layout_marginTop="5px"/>
+    <ImageView android:layout_width="32px" android:layout_height="40px" android:id="@+id/imgParkState"
+               android:scaleType="fitCenter" android:layout_alignParentTop="false"
+               android:layout_alignLeft="@+id/txtName" android:layout_below="@+id/txtName"/>
+    <ImageView android:layout_width="32px" android:layout_height="40px" android:id="@+id/imgParkWeather"
+               android:scaleType="fitCenter"
+               android:layout_alignTop="@+id/imgParkState" android:layout_toRightOf="@+id/imgParkState"/>
+    <TextView android:layout_width="250px" android:layout_height="40px"
+              android:id="@+id/txtParkWeatherStr" android:textColor="#FFFFFF"
+              android:textSize="20px"
+              android:gravity="center_vertical|left"
+              android:layout_toRightOf="@+id/imgParkWeather" android:layout_alignTop="@+id/imgParkState"
+              android:layout_marginLeft="10px"/>
+    <ImageView
+            android:layout_width="20px"
+            android:layout_height="50px"
+            android:id="@+id/imgDetail" android:layout_alignParentTop="false"
+            android:layout_marginRight="20px"
+            android:layout_alignParentRight="true" android:src="@drawable/arrow" android:layout_centerVertical="true"/>
+</RelativeLayout>

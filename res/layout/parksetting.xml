@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RLParkSettingMain">
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/imgBackground"
+               android:background="@drawable/background_alpha"/>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80px" android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/RLTopBar">
+        <ImageView
+                android:layout_width="100px"
+                android:layout_height="60px"
+                android:id="@+id/imgLogoMark" android:background="@drawable/logo_small"
+                android:layout_marginLeft="100px" android:layout_centerVertical="true"/>
+        <TextView
+                android:layout_width="200px"
+                android:layout_height="fill_parent"
+                android:text="@string/logo_title"
+                android:id="@+id/lblLogo" android:layout_alignParentTop="true" android:layout_alignParentLeft="false"
+                android:gravity="center_vertical"
+                android:textColor="#FFFFFF" android:textSize="32px" android:layout_toRightOf="@+id/imgLogoMark"/>
+    </RelativeLayout>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="80px"
+            android:text="@string/settings_title"
+            android:id="@+id/lblTitle" android:layout_below="@+id/RLTopBar"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="30px" android:layout_marginRight="30px"
+            android:gravity="center_vertical" android:textSize="40px" android:textColor="#FFFFFF"
+            android:layout_marginTop="20px"/>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60px" android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/RLBottomBar" android:background="#00FFFF">
+        <TextView
+                android:layout_width="120px"
+                android:layout_height="fill_parent"
+                android:text="@string/mypark_title"
+                android:id="@+id/lblMyParks" android:layout_alignParentBottom="false"
+                android:layout_alignParentLeft="false" android:gravity="center" android:textColor="#FFFFFF"
+                android:textSize="20px" android:background="#000000"
+                android:layout_marginBottom="1px" android:layout_alignParentTop="true"/>
+        <TextView android:layout_width="120px" android:layout_height="fill_parent" android:text="@string/news_title"
+                  android:id="@+id/lblEpicDirt"
+                  android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="18px" android:layout_alignParentLeft="false"
+                  android:layout_toRightOf="@id/lblMyParks" android:layout_marginBottom="1px"
+                  android:background="#000000" android:layout_alignParentTop="true"/>
+        <TextView android:layout_width="120px" android:layout_height="fill_parent" android:text="@string/search_title"
+                  android:id="@+id/lblSearch" android:gravity="center" android:textColor="#FFFFFF"
+                  android:layout_centerVertical="true" android:layout_alignParentLeft="false"
+                  android:layout_toRightOf="@id/lblEpicDirt" android:textSize="18px" android:layout_marginBottom="1px"
+                  android:background="#000000" android:layout_alignParentTop="true"/>
+        <TextView android:layout_width="120px" android:layout_height="fill_parent" android:text="@string/settings_title"
+                  android:id="@+id/lblSettings" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="18px" android:layout_centerVertical="true" android:layout_alignParentLeft="false"
+                  android:layout_toRightOf="@id/lblSearch" android:layout_marginBottom="3px"
+                  android:background="#000000" android:layout_alignParentTop="true" android:textStyle="bold"/>
+    </RelativeLayout>
+    <EditText android:layout_width="420px" android:layout_height="50px" android:id="@+id/ednUsername"
+              android:background="@drawable/edit_background"
+              android:hint="@string/setting_username" android:textColor="#FFFFFF" android:textSize="20px"
+              android:textColorHint="#888888" android:paddingLeft="20px" android:layout_below="@+id/lblTitle"
+              android:layout_alignLeft="@+id/lblTitle" android:layout_marginTop="30px"
+            />
+    <EditText android:layout_width="420px" android:layout_height="50px" android:id="@+id/ednCountry"
+              android:background="@drawable/edit_background" android:hint="@string/setting_country"
+              android:textColor="#FFFFFF" android:textSize="20px" android:textColorHint="#888888"
+              android:paddingLeft="20px" android:layout_below="@+id/ednUsername" android:layout_alignLeft="@+id/lblTitle"
+              android:layout_marginTop="30px"/>
+    <TextView
+            android:layout_width="150px"
+            android:layout_height="30px"
+            android:text="@string/setting_notification"
+            android:id="@+id/lblNotification" android:layout_centerVertical="true" android:layout_alignLeft="@+id/ednCountry"
+            android:layout_marginLeft="20px" android:textSize="20px" android:textColor="#888888"
+            android:gravity="center_vertical"/>
+    <RelativeLayout
+            android:layout_width="100px"
+            android:layout_height="30px" android:layout_alignTop="@+id/lblNotification"
+            android:layout_toRightOf="@+id/lblNotification" android:layout_marginLeft="30px"
+            android:id="@+id/RLNotifyBack" android:background="@drawable/setting_option">
+        <TextView
+                android:layout_width="50px"
+                android:layout_height="fill_parent"
+                android:text="ON"
+                android:id="@+id/txtNotifyOn" android:gravity="center" android:textColor="#FFFFFF"
+                android:textSize="16px"/>
+        <TextView android:layout_width="50px" android:layout_height="fill_parent" android:text="OFF"
+                  android:id="@+id/txtNotifyOff" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="16px" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <TextView android:layout_width="150px" android:layout_height="30px" android:text="@string/setting_units"
+              android:id="@+id/lblUnits"
+              android:textSize="20px"
+              android:textColor="#888888" android:gravity="center_vertical" android:layout_below="@+id/lblNotification"
+              android:layout_alignLeft="@+id/lblNotification" android:layout_marginTop="20px"/>
+    <RelativeLayout android:layout_width="100px" android:layout_height="30px"
+                    android:id="@+id/RLUnitsBack"
+                    android:background="@drawable/setting_option"
+                    android:layout_alignTop="@+id/lblUnits" android:layout_toRightOf="@+id/lblUnits"
+                    android:layout_marginLeft="30px">
+        <TextView android:layout_width="50px" android:layout_height="fill_parent" android:text="F"
+                  android:id="@+id/txtUnitsUsa" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="16px"/>
+        <TextView android:layout_width="50px" android:layout_height="fill_parent" android:text="C"
+                  android:id="@+id/txtUnitsOther" android:gravity="center" android:textColor="#FFFFFF"
+                  android:textSize="16px" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <Button
+            android:layout_width="200px"
+            android:layout_height="50px"
+            android:text="@string/setting_savechanges"
+            android:id="@+id/btnSaveChanges" android:layout_below="@+id/lblUnits" android:layout_alignLeft="@+id/ednCountry"
+            android:layout_marginTop="180px" android:background="@drawable/green_button" android:textColor="#FFFFFF"
+            android:textSize="18px"/>
+    <Button android:layout_width="200px" android:layout_height="50px" android:text="@string/setting_contact"
+            android:id="@+id/btnContactUs"
+            android:layout_alignTop="@+id/btnSaveChanges" android:layout_toRightOf="@+id/btnSaveChanges"
+            android:layout_marginLeft="10px" android:background="@drawable/blue_button" android:textColor="#FFFFFF"
+            android:textSize="18px"/>
+</RelativeLayout>

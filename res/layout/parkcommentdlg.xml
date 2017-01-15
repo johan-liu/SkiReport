@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="420px"
+        android:layout_height="480px" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RLCommentDlgMain" android:background="#AAFFFFFF">
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50px" android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" android:id="@+id/RLUserName">
+        <TextView
+                android:layout_width="70px"
+                android:layout_height="fill_parent"
+                android:text="User:"
+                android:id="@+id/lblName" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+                android:gravity="center_vertical" android:textColor="#000000" android:textSize="18px"
+                android:layout_marginLeft="10px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="fill_parent"
+                  android:id="@+id/txtName" android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+                  android:gravity="center_vertical" android:textColor="#000000" android:textSize="18px"
+                  android:layout_marginLeft="10px" android:layout_toRightOf="@+id/lblName"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="210px" android:layout_height="50px"
+                    android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+                    android:id="@+id/RLCountry" android:layout_toRightOf="@+id/RLUserName" android:visibility="gone">
+        <TextView android:layout_width="70px" android:layout_height="fill_parent" android:text="Country:"
+                  android:id="@+id/lblCountry" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+                  android:gravity="center_vertical" android:textColor="#000000" android:textSize="14px"
+                  android:layout_marginLeft="10px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/txtCountry"
+                  android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+                  android:gravity="center_vertical" android:textColor="#000000" android:textSize="14px"
+                  android:layout_marginLeft="10px" android:layout_toRightOf="@+id/lblCountry"/>
+    </RelativeLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="2px" android:id="@+id/imgLine1"
+               android:src="@drawable/line" android:layout_alignLeft="@+id/RLUserName"
+               android:layout_below="@+id/RLUserName" android:layout_marginTop="5px"/>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="50px"
+                    android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+                    android:id="@+id/RLDate" android:layout_below="@+id/imgLine1" android:layout_marginTop="5px">
+        <TextView android:layout_width="70px" android:layout_height="fill_parent" android:text="Date:"
+                  android:id="@+id/lblDate" android:layout_alignParentLeft="true"
+                  android:layout_alignParentTop="true" android:gravity="center_vertical" android:textColor="#000000"
+                  android:textSize="18px" android:layout_marginLeft="10px"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/txtDate"
+                  android:layout_alignParentLeft="false" android:layout_alignParentTop="false"
+                  android:gravity="center_vertical" android:textColor="#000000" android:textSize="18px"
+                  android:layout_marginLeft="10px" android:layout_toRightOf="@+id/lblDate"/>
+    </RelativeLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="2px" android:id="@+id/imgLine"
+               android:src="@drawable/line" android:layout_alignLeft="@+id/RLUserName"
+               android:layout_below="@+id/RLDate" android:layout_marginTop="5px"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/txtComment" android:layout_alignLeft="@+id/RLUserName" android:layout_below="@+id/imgLine"
+            android:layout_margin="10px" android:textColor="#000000" android:textSize="18px"/>
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="400px"
+        android:layout_height="40px" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RLPopularItemMain">
+    <ImageView android:layout_width="16px" android:layout_height="40px" android:id="@+id/imgMark"
+               android:scaleType="fitCenter" android:src="@drawable/progress_blue" android:layout_alignParentTop="false"
+               android:layout_marginLeft="20px"/>
+    <TextView
+            android:layout_width="350px"
+            android:layout_height="40px"
+            android:id="@+id/txtName" android:layout_marginLeft="20px" android:gravity="center_vertical"
+            android:textColor="#FFFFFF" android:textSize="20px" android:ellipsize="end" android:lines="1"
+            android:layout_toRightOf="@+id/imgMark"/>
+</RelativeLayout>
